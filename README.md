@@ -22,13 +22,13 @@ This gem requires an instance of ArchivesSpace to be running on an accessible se
 ```
 ArchivesSpaceApiUtility.configure do |config|
   config.host = 'localhost'
-  config.port = 8089
+  config.port = 8089 # backend port number
   config.username = 'admin'
   config.password = 'admin'
   config.https = false
 end
 ```
-**NOTE: If ArchivesSpace components are running under separate subdomains rather than on different ports on the same host, set `config.port` to `nil`. This will often be the case if ArchivesSpace is accessed only via https.**
+**NOTE: If ArchivesSpace components are running under separate subdomains rather than on different ports on the same host, set `config.port` to `nil` and provide the appropriate host for the backend. This will often be the case if ArchivesSpace is accessed via https.**
 
 This can be included in a script (after including ArchivesSpaceApiUtility).
 
