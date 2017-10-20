@@ -28,6 +28,7 @@ ArchivesSpaceApiUtility.configure do |config|
   config.https = false
 end
 ```
+**NOTE: If ArchivesSpace components are running under separate subdomains rather than on different ports on the same host, set `config.port` to `nil`. This will often be the case if ArchivesSpace is accessed only via https.**
 
 This can be included in a script (after including ArchivesSpaceApiUtility).
 
