@@ -78,16 +78,10 @@ production:
 
 ## Usage
 
-Include the module:
+Start a session (assigned to a variable for re-use):
 
 ```
-Include ArchivesSpaceApiUtility
-```
-
-Start a session (aasigned to a variable for re-use):
-
-```
-session = ArchivesSpaceSession.new
+session = ArchivesSpaceApiUtility::ArchivesSpaceSession.new
 ```
 
 Then use `get` or `post` to do what you need to do...
