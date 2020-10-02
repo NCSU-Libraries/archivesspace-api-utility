@@ -96,7 +96,7 @@ Make a GET request:
 
     response = session.get('/repositories')
 
-That returns a [NET::HTTPResponse](http://www.ruby-doc.org/stdlib-2.1.1/libdoc/net/http/rdoc/Net/HTTPResponse.html) object:
+That returns a [NET::HTTPResponse](https://ruby-doc.org/stdlib-2.7.1/libdoc/net/http/rdoc/Net/HTTPResponse.html) object:
 
 ```
 #<Net::HTTPOK 200 OK readbody=true>
