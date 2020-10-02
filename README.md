@@ -1,6 +1,6 @@
 ## ArchivesSpace API Utility
 
-A Ruby gem to facilitate interaction with the [ArchivesSpace](http://archivesspace.org/) REST API. Provides basic functionality for establishing and maintaining a session and performing GET and POST operations (using Ruby's Net::HTTP library). This gem works at a fairly low level and just makes it a bit easier to interact with the API in your Ruby code, but without a lot of abstraction. For a more robust alternative, you might try Mark Cooper's [archivespace-client](https://github.com/mark-cooper/archivesspace-client).
+A Ruby gem to facilitate interaction with the [ArchivesSpace](http://archivesspace.org/) REST API. Provides basic functionality for establishing and maintaining a session and performing GET and POST operations (using Ruby's Net::HTTP library). This gem works at a fairly low level and just makes it a bit easier to interact with the API in your Ruby code, but without a lot of abstraction.
 
 Documentation on the ArchivesSpace API can be found at http://archivesspace.github.io/archivesspace/doc/file.API.html.
 
@@ -8,7 +8,7 @@ Documentation on the ArchivesSpace API can be found at http://archivesspace.gith
 
 Add this line to your application's Gemfile:
 
-    gem 'archivesspace-api-utility', :git => "https://github.com/trevorthornton/archivesspace-api-utility.git"
+    gem 'archivesspace-api-utility', :git => "https://github.com/NCSU-Libraries/archivesspace-api-utility.git"
 
 Then execute:
 
