@@ -81,7 +81,7 @@ production:
 Include the module:
 
 ```
-Include ArchivesSpaceApiUtility
+include ArchivesSpaceApiUtility
 ```
 
 Start a session (aasigned to a variable for re-use):
