@@ -1,6 +1,6 @@
 ## ArchivesSpace API Utility
 
-A Ruby gem to facilitate interaction with the [ArchivesSpace](http://archivesspace.org/) REST API. Provides basic functionality for establishing and maintaining a session and performing GET and POST operations (using Ruby's Net::HTTP library). This gem works at a fairly low level and just makes it a bit easier to interact with the API in your Ruby code, but without a lot of abstraction. For a more robust alternative, you might try Mark Cooper's [archivespace-client](https://github.com/mark-cooper/archivesspace-client).
+A Ruby gem to facilitate interaction with the [ArchivesSpace](http://archivesspace.org/) REST API. Provides basic functionality for establishing and maintaining a session and performing GET and POST operations (using Ruby's Net::HTTP library). This gem works at a fairly low level and just makes it a bit easier to interact with the API in your Ruby code, but without a lot of abstraction.
 
 Documentation on the ArchivesSpace API can be found at http://archivesspace.github.io/archivesspace/doc/file.API.html.
 
@@ -8,7 +8,7 @@ Documentation on the ArchivesSpace API can be found at http://archivesspace.gith
 
 Add this line to your application's Gemfile:
 
-    gem 'archivesspace-api-utility', :git => "https://github.com/trevorthornton/archivesspace-api-utility.git"
+    gem 'archivesspace-api-utility', :git => "https://github.com/NCSU-Libraries/archivesspace-api-utility.git"
 
 Then execute:
 
@@ -78,9 +78,10 @@ production:
 
 ## Usage
 
-Include the module:
+Start a session (assigned to a variable for re-use):
 
 ```
+<<<<<<< HEAD
 include ArchivesSpaceApiUtility
 ```
 
@@ -88,6 +89,9 @@ Start a session (aasigned to a variable for re-use):
 
 ```
 session = ArchivesSpaceSession.new
+=======
+session = ArchivesSpaceApiUtility::ArchivesSpaceSession.new
+>>>>>>> 60901cd0cecdeb55c9d9a3eb1979dc2a6a21c021
 ```
 
 Then use `get` or `post` to do what you need to do...
@@ -102,7 +106,7 @@ Make a GET request:
 
     response = session.get('/repositories')
 
-That returns a [NET::HTTPResponse](http://www.ruby-doc.org/stdlib-2.1.1/libdoc/net/http/rdoc/Net/HTTPResponse.html) object:
+That returns a [NET::HTTPResponse](https://ruby-doc.org/stdlib-2.7.1/libdoc/net/http/rdoc/Net/HTTPResponse.html) object:
 
 ```
 #<Net::HTTPOK 200 OK readbody=true>
