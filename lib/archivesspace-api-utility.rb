@@ -45,20 +45,25 @@ module ArchivesSpaceApiUtility
     end
 
     def post(path,data={},headers={})
-      if data.kind_of?(Hash)
-        data = JSON.generate(data)
+      # verify that path starts with /
+      if !path.match(/^\//)
+        path = '/' + path
       end
 
-      # % needs to be replaced with entities or else the post will fail
-      # anything that look like a real JS escapes will not be replaced
-      data.gsub!(/\%(?![A-Za-z\d]{2})/, '&#37;')
+      body = data.kind_of?(String) ? data.dup : JSON.generate(data)
 
-      headers.merge!(@auth_header)
+      request_headers = {
+        'Content-Type' => 'application/json',
+        'Accept' => 'application/json'
+      }
+      request_headers.merge!(headers)
+      request_headers.merge!(@auth_header)
+
       Net::HTTP.start(ArchivesSpaceApiUtility.configuration.host,
           ArchivesSpaceApiUtility.configuration.port,
           use_ssl: ArchivesSpaceApiUtility.configuration.https) do |http|
         http.read_timeout = @read_timeout
-        http.post(path, data, headers)
+        http.post(path, body, request_headers)
       end
     end
 
