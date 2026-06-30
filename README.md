@@ -2,7 +2,7 @@
 
 A Ruby gem to facilitate interaction with the [ArchivesSpace](http://archivesspace.org/) REST API. Provides basic functionality for establishing and maintaining a session and performing GET and POST operations (using Ruby's Net::HTTP library). This gem works at a fairly low level and just makes it a bit easier to interact with the API in your Ruby code, but without a lot of abstraction.
 
-Documentation on the ArchivesSpace API can be found at http://archivesspace.github.io/archivesspace/doc/file.API.html.
+Documentation on the ArchivesSpace API can be found at [http://archivesspace.github.io/archivesspace/doc/file.API.html](https://archivesspace.github.io/archivesspace/api/).
 
 ## Installation
 
